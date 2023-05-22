@@ -1,0 +1,128 @@
+html,
+head,
+body,
+#main-container {
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+nav {
+    padding: 1rem;
+    border-bottom: 1px solid #000;
+    display: flex;
+}
+
+.nav-links {
+    flex-grow: 1;
+    justify-content: end;
+    display: flex;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: .9rem;
+}
+
+#content-container {
+    flex-grow: 1;
+    display: flex;
+    min-height: 0;
+}
+
+#sidebar {
+    width: 348px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+
+#map {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.mapboxgl-popup-close-button{
+  display:none;
+}
+.mapboxgl-popup-content{
+  background-color:#58b3f0;
+  font:400 12px/12px 'Source Sans Pro','Helvetica Neue',Sans-serif;
+  padding:1;
+  width:180px;
+}
+.mapboxgl-popup-content-wrapper{
+  padding:1%;
+}
+
+.container {
+  position: relative;
+}
+
+.element-with-timer {
+  position: absolute;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 800px) {
+    #content-container {
+        flex-direction: column-reverse;
+    }
+
+    #map {
+        height: 60%;
+        flex-shrink: 0;
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+}
+
+
+.button-76 {
+  background-color: hsl(199, 90%, 80%);
+  background-image: linear-gradient(to bottom right, #c7ecfa, #58b3f0, #f3790e);
+  border: 0;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: 'Source Sans Pro','Helvetica Neue',Sans-serif;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  line-height: 1.75rem; /* 28px */
+  padding: 1rem 1.25rem;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-76:hover {
+  box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+  .button-76 {
+    font-size: 1.5rem; /* 24px */
+    padding: 1rem 1.5rem;
+    line-height: 2rem; /* 32px */
+  }
+}
